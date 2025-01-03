@@ -1,0 +1,65 @@
+
+{% extends 'base.html' %}
+{% block title %}Search Documents{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet"  type="text/css" href="{{ url_for('static', path='/css/searchpage.css') }}" />
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Document Search</h1>
+    <form id="searchForm">
+        <label for="query">Search Query</label>
+        <input type="text" id="query" name="query" placeholder="Enter your search term...">
+
+        
+       <div class="toggle-advanced displaynone" id="toggleAdvanced" >Advanced Search</div>
+        
+        <!-- <div class="advanced-search" id="advancedSearch"> -->
+            <label for="tags">Tags</label>
+            <input type="text" id="tags" name="tags" placeholder="Enter tags, separated by commas...">
+            
+            <label for="author">Author</label>
+            <input type="text" id="author" name="author" placeholder="Enter author name...">
+            
+            <label for="from_date">From Date</label>
+            <input type="date" id="from_date" name="from_date">
+            
+            <label for="to_date">To Date</label>
+            <input type="date" id="to_date" name="to_date">
+        <!-- </div> -->
+        <button type="submit">Search</button>
+    </form>
+
+    <div class="table-container">       
+        <div class="table-content">
+            <!-- Repeat these rows to see the scroll effect -->
+            <template id="resultrow">
+                <div data-type="record">
+                    <div data-type="first-row">
+                        <span></span>
+                        <span class="title" data-type="title"></span>
+                        <a data-type="link"><i class="fa fa-download"></i></a>
+                    </div>
+                    <div>                        
+                        <span class="author" data-type="author"></span>
+                        <span class="date" data-type="uploaddate"></span>
+                    </div>
+                    <span class="tags" data-type="tags"></span>
+                    <span class="content truncate" data-type="content"></span>
+                </div>
+            </template>                    
+        </div>
+    </div>
+    <div data-type="result-records">
+         
+    </div>
+    <!-- <div class="pagination">
+        <button id="prev" disabled>Previous</button>
+        <span id="page-info"></span>
+        <button id="next">Next</button>
+    </div> -->
+    <div id="noresults" class="no-results displaynone">No results found</div>
+
+<script type="text/javascript" src="{{ url_for('static', path='/js/searchpage.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', path='/js/common.js') }}"></script>
+{% endblock %}

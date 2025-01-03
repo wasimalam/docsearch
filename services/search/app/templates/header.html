@@ -1,0 +1,48 @@
+   
+<nav class="navbar">
+    <div class="navbar-left">
+        <div class="logo">
+            <i class="fa fa-search fa-1x" ></i>
+            <span class="brand-name">DocSearch</span>
+        </div>
+    </div>
+    <div class="navbar-right">
+        <div class="search-container">
+            <input id="search-input" type="text" class="search-bar" placeholder="Search documents...">
+            <i id="search-icon" class="fas fa-search search-icon"></i> 
+        </div>
+    </div>
+    <div class="navbar-right">
+        
+        <div class="quick-links">
+            {% if userdata.userrole == 99 %}<a href="upload">Upload</a>{% endif %}
+            <a href="search">Documents</a>
+            <!-- <a href="#">Recent</a>  -->
+            <a href="#">Favorites</a>
+            <a href="advsearch">Advanced</a>
+        </div>
+        <div class="profile-notifications">
+            <!-- <div class="help">
+                <i class="fas fa-question-circle"></i>
+            </div> -->
+            <!-- <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="notification-dot"></span>
+            </div> -->
+            {% if userdata.username !='' %}
+            <div id="profileButton" class="profile-icon">
+                <i class="fa fa-user-circle" alt="User Profile"></i>
+            </div>
+            <div class="profile">
+                <div id="profile-dropdown" class="profile-dropdown">
+                    <a href="#">Profile</a>
+                    <a href="#">Settings</a>
+                    <a id="logout" href="#">Log Out</a>
+                </div>
+            </div>
+            {% else %}
+            <button id="login">Sign in</button>
+            {% endif %}
+        </div>
+    </div>
+</nav>

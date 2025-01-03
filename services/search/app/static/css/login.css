@@ -1,0 +1,20 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    background-color: #f0f0f0; /* Optional: to make the form stand out */
+}
+
+form {
+    width: 350px; /* Set the width of the form */
+    padding: 20px;
+    background-color: white; /* Optional: form background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: to add a shadow effect */
+    border-radius: 0.5rem;
+}
+
+.container{
+    border-radius: 0.5rem;
+}

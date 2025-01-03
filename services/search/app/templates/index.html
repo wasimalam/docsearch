@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Search</title>
+</head>
+<body>
+
+<div class="container">
+    <h1>Document Search</h1>
+    <form action="search_results.html" method="get">
+        <label for="query">Search Query</label>
+        <input type="text" id="query" name="query" placeholder="Enter your search term..." required>
+
+        <label for="tags">Tags</label>
+        <input type="text" id="tags" name="tags" placeholder="Enter tags, separated by commas...">
+
+        <label for="author">Author</label>
+        <input type="text" id="author" name="author" placeholder="Enter author name...">
+
+        <label for="from_date">From Date</label>
+        <input type="date" id="from_date" name="from_date">
+
+        <label for="to_date">To Date</label>
+        <input type="date" id="to_date" name="to_date">
+
+        <button type="submit">Search</button>
+    </form>
+</div>
+
+</body>
+</html>

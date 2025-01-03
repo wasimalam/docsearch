@@ -1,0 +1,12 @@
+fastapi>=0.111.0,<0.113.0
+pydantic>=2.7.0,<3.0.0
+elasticsearch>=7.16,<8
+#sentence-transformers>=2,<3.0.1
+#uuid=>0.0.1
+configparser>=0.0.1
+python-docx>=1.1.2
+bcrypt>=4.0.1
+mysql-connector-python>=8.0.31
+#pyjwt>=2.6.0
+passlib[bcrypt]>=1.7.4
+python-jose>=3.3.0

@@ -1,0 +1,132 @@
+
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ccc;
+}
+
+thead th {
+    background-color: #f9f9f9;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    top: 60px;
+    height: calc(100vh - 60px);
+}
+.pagination {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    margin: 0 5px;
+}
+
+.pagination span {
+    font-weight: bold;
+}
+
+.result-meta{
+    padding: 5px 0;
+}
+
+.result-snippet{
+    min-width: 800px;
+    padding-bottom: 20px;   
+}
+
+em{
+    font-weight: bold;
+    color: #ff6347; /* Tomato color */
+    background-color: #ffffe0; /* Light yellow background */
+}
+.no-results {
+    text-align: center;
+    min-width: 800px;
+    padding: 1rem;
+}
+
+div[data-type="record"]{
+    display: flex;
+    flex-direction: column;  
+    gap: 0.5rem ;
+    margin-top:0.5rem;
+    margin-bottom:0.5rem;
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+div[data-type="record"] div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+}
+div[data-type="record"] div[data-type="first-row"]{
+    justify-content: space-between;    
+    gap :1rem;
+}
+div[data-type="record"] .title {
+    font-weight: 600;
+    color: #008080 !important;
+}
+
+
+div[data-type="record"] .author{
+    font-weight: 700;
+    color: #4b6b8f !important;
+}
+
+div[data-type="record"] .tags{
+    font-style: italic;
+    font-size: 0.7rem;    
+}
+div[data-type="record"] .date{
+    color: #4b6b8f !important;
+    font-size: 0.8rem;    
+}
+div[data-type="record"] [data-type="link"] i{
+    color: #007BFF;
+    font-weight: 100;
+}
+div[data-type="record"] [data-type="content"]{
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #cacaca;
+    padding-top: 0.5rem;
+    font-family: var(--font1);
+    font-size: 0.8rem;
+    gap: 0.5rem;
+    max-height: 300px;
+    overflow: auto;
+}
+div[data-type="record"] [data-type="content"].truncate {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3; /* Limit to 3 lines */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%; /* You can set a specific width, if needed */
+    white-space: normal; /* Allows wrapping within lines */
+}
+div[data-type="result-records"] {
+    height: calc(100% - 60px); /* Set the height of the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+main:has(form) div[data-type="result-records"] {
+    padding: 0.5rem;
+    height: calc(100% - 570px); /* Set the height of the scrollable area */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+main:has(form) div[data-type="result-records"]:not(:has(div)) {
+    display: none;
+}

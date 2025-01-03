@@ -1,0 +1,35 @@
+
+{% extends 'base.html' %}
+{% block title %}Search Documents{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet"  type="text/css" href="{{ url_for('static', path='/css/searchpage.css') }}" />
+{% endblock %}
+{% block content %}
+<div class="container">
+    <!-- <h1>Document Search</h1> -->
+    <template id="resultrow">
+        <div class="result-item">         
+            <div data-type="record">
+                <div data-type="first-row">
+                    <span></span>
+                    <span class="title" data-type="title"></span>
+                    <a data-type="link"><i class="fa fa-download"></i></a>
+                </div>
+                <div>                        
+                    <span class="author" data-type="author"></span>
+                    <span class="date" data-type="uploaddate"></span>
+                </div>
+                <span class="tags" data-type="tags"></span>
+                <span class="truncate" data-type="content"></span>
+            </div>
+        </div>
+    </template>
+    <div data-type="result-records">
+         
+    </div>
+   
+    <div id="noresults" class="no-results displaynone">No results found</div>
+
+<script type="text/javascript" src="{{ url_for('static', path='/js/searchpage.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', path='/js/common.js') }}"></script>
+{% endblock %}
