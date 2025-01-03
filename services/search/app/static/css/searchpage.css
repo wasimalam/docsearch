@@ -127,6 +127,6 @@ main:has(form) div[data-type="result-records"] {
     height: calc(100% - 570px); /* Set the height of the scrollable area */
     overflow-y: auto; /* Enable vertical scrolling */
 }
-main:has(form) div[data-type="result-records"]:not(:has(div)) {
+main div[data-type="result-records"]:not(:has(div)) {
     display: none;
 }
